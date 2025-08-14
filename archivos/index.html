@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: blue;
+      background: #fce3ec;
+      transition: background-color 1s ease;
+    }
+
+    h1 { 
+        color: brown; 
+        height: auto;
+        display: block;
+        text-align: center;
+    }
+
+    img {
+      width: 790px;
+      max-width: 100%;
+      border-radius: 10px;
+      display: block;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .mensaje {
+      font-size: 20px;
+      margin: 30px;
+    }
+
+    .contenedor {
+      padding: 15px 25px;
+    }
+    footer{
+      text-align: center;
+      max-width: 100%;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Mi primera página web con dominio y hosting gratis (hecho en InfinityFree)</h1>
+    <img src="https://www.aboutespanol.com/thmb/VKaT5_boihxgQ2gfEoxp1dYZoIA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/surfing-the-internet-184146944-57f1a5d65f9b586c35868278.jpg" alt="Navegando por internet" />
+  </div>
+  <footer>
+    &copy; 2025 Ghanfranco. Todos los derechos reservadors
+  </footer class="copyright">
+  <script>
+  function cambiarColor(){
+    const color=`hsl(${Math.floor(Math.random()*360)}, 70%, 85%)`;
+    document.body.style.backgroundColor=color;
+  }
+  setInterval(cambiarColor, 3000);
+</script>
+</body>
+
+
+</html>
