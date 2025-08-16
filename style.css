@@ -1,0 +1,149 @@
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0f2ff 0%, #b3d9ff 100%);
+  animation: backgroundShift 12s ease infinite;
+}
+
+/* Animación sutil en el fondo */
+@keyframes backgroundShift {
+  0% { background: linear-gradient(135deg, #e0f2ff 0%, #b3d9ff 100%); }
+  50% { background: linear-gradient(135deg, #cce7ff 0%, #99ccff 100%); }
+  100% { background: linear-gradient(135deg, #e0f2ff 0%, #b3d9ff 100%); }
+}
+
+.contenedorTexto {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #1e3c72;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.15);
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 119, 255, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 119, 255, 0.25);
+}
+
+label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: left;
+  font-size: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 8px;
+  border: 2px solid #d6e9ff;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.25);
+  outline: none;
+  transform: scale(1.02);
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #0077ff, #00a2ff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  box-shadow: 0 6px 14px rgba(0, 119, 255, 0.35);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0066dd, #0099ff);
+  box-shadow: 0 8px 18px rgba(0, 119, 255, 0.45);
+  transform: translateY(-3px) scale(1.03);
+}
+
+button:active {
+  transform: translateY(0) scale(1);
+}
+
+#resultado {
+  margin-top: 28px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2c3e50;
+  line-height: 1.6;
+  padding: 15px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  border-left: 5px solid #0077ff;
+  animation: fadeIn 0.5s ease;
+}
+
+#imagen img {
+  margin-top: 25px;
+  max-width: 230px;
+  border-radius: 14px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#imagen img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
